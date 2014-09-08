@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>example</title>
+    <script type="text/javascript" src="http://cn.toursforfun.com/js/jquery.js"></script>
+</head>
+<body>
+<div id="countdown">
+    
+</div>
+<div id="countdown1">
+    
+</div>
+<script src="jQuery.countdown.js"></script>
+<script>
+var tmp='<li><span>DAYS</span><br/><span class="count_down_num">{{#days}}</span></li><li><span>HOURS</span><br/><span class="count_down_num">{{#hours}}</span></li><li><span>MINUTES</span><br/><span class="count_down_num">{{#minutes}}</span></li><li><span>SECONDS</span><br/><span class="count_down_num">{{#seconds}}</span></li>';
+    $("#countdown").countdown({
+                start: new Date("2014/09/8 19:27:20").getTime(),
+                end: new Date("2014/09/25 0:00:00").getTime(),
+                template:tmp ,
+                evtactive: function(){
+                }
+            });
+     $("#countdown1").countdown({
+                start: new Date("2014/09/9 19:27:20").getTime(),
+                end: new Date("2014/09/25 0:00:00").getTime(),
+                template: '{{#seconds}}'
+            });
+</script>
+</body>
+</html>
